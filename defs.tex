@@ -1,0 +1,151 @@
+\def\newacronym#1#2#3{\gdef#1{#3 (#2)\gdef#1{#2}}}
+
+%%%%%%%% common commands
+\def\gw#1{gravitational-wave#1 (GW#1)\gdef\gw{GW}}
+\def\grb#1{gamma ray burst#1 (GRB#1)\gdef\grb{GRB}}
+
+\newacronym{\NR}{NR}{Numerical Relativity}
+\newacronym{\GR}{GR}{General Relativity}
+
+
+\def\th{\textrm{\mbox{\tiny{th}}}}
+\def\Tobs{T_{\textrm{\mbox{\tiny{obs}}}}}
+\def\Tcoh{T_{\textrm{\mbox{\tiny{coh}}}}}
+\def\nd{{\mathbf{n}}_d}
+\def\SSB{\textrm{\mbox{\tiny{ssb}}}}
+\def\ns{\textrm{\mbox{\tiny{NS}}}}
+\def\min{\textrm{\mbox{\tiny{min}}}}
+\def\max{\textrm{\mbox{\tiny{max}}}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\N{\textit{\mbox{\tiny{N}}}}
+\def \calf {\cal F}
+\def\etal{{\it et al.}}
+
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\un}[1]{\mathrm{\,#1}}
+\newcommand{\ee}[1]{\!\times\!10^{#1}}
+\newcommand{\Qhat}{{\widehat{Q}}}
+\newcommand{\What}{{\widehat{W}}}
+\newcommand{\rd}{\,{\rm d}}
+\newcommand{\avec}{\mbox{\boldmath$a$}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\mtot}{\mathrm{M}_{\mathrm{T}}}
+\newcommand{\msun}{\mathrm{M}_{\odot}}
+\newcommand{\Msun}{\mathrm{M}_{\odot}}
+\newcommand{\Mtot}{\mathrm{M}_{T}}
+
+\newcommand{\np}{\vspace{0.2cm}\noindent}
+
+
+\def\th{\textrm{\mbox{\tiny{th}}}}
+\def\Tobs{T_{\textrm{\mbox{\tiny{obs}}}}}
+\def\Tcoh{T_{\textrm{\mbox{\tiny{coh}}}}}
+\def\nd{{\mathbf{n}}_d}
+\def\SSB{\textrm{\mbox{\tiny{ssb}}}}
+\def\ns{\textrm{\mbox{\tiny{NS}}}}
+\def\min{\textrm{\mbox{\tiny{min}}}}
+\def\max{\textrm{\mbox{\tiny{max}}}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\N{\textit{\mbox{\tiny{N}}}}
+\def \calf {\cal F}
+\def\ie{{\it i.e.}}
+\def\eg{{\it e.g.}}
+\def\vs{{\it vs.}}
+\def\fstat{$\calf$-statistic}
+\newcommand{\G}{\mathcal{G}}
+
+% ---- Burst-specific commands.
+\newcommand{\cwb}{\textsc{cwb2g}}
+\newcommand{\stamp}{\textsc{stamp}}
+\newcommand{\stampas}{\textsc{stamp-as}}
+\newcommand{\ep}{\textsc{excesspower}}
+\newcommand{\xp}{\textsc{x-pipeline}}
+\newcommand{\lib}{\textsc{lib}}
+\newcommand{\bw}{\textsc{bayeswave}}
+\newcommand{\kw}{\textsc{kleine-welle}}
+\newcommand{\om}{\textsc{omicron}}  
+\newcommand{\bwg}{Burst Group}
+
+% CBC group definitions
+\newcommand{\MBTA}{\textsc{\ac{MBTA}}\xspace}
+\newcommand{\LLOID}{\ac{LLOID}\xspace}
+\newcommand{\GSTLALCBC}{\textsc{Gstlal-CBC}\xspace}
+\newcommand{\ahope}{\textsc{aHope}\xspace}
+\newcommand{\bayestar}{\textsc{Bayestar}\xspace}
+\newcommand{\lalinference}{\textsc{LALInference}\xspace}
+\newcommand{\pycbc}{\textsc{pyCBC}\xspace}
+\acrodef{CBC}{Compact Binary Coalescence}
+\acrodef{GW}{gravitational-wave}
+\acrodef{BNS}{binary neutron star}
+\acrodef{NS}{neutron star}
+\acrodef{NSBH}{neutron star black hole binary}
+\newacronym{\BBH}{BBH}{black hole binary}
+\acrodef{EM}{electromagnetic}
+\acrodef{EOS}{equation of state}
+\acrodef{GRB}{gamma-ray burst}
+\acrodef{LLOID}{Low-Latency Online Inspiral Detector}
+\acrodef{MBTA}{Multi-Band Template Analysis}
+
+% Computing definitions
+\newcommand\ligocomputing{LIGO Computing}
+\newcommand\tieronesites{Tier-1-Observatories}
+\newcommand\tieronecit{Tier-1-Caltech}
+\newcommand\tiertwoshared{Tier-2-Shared}
+\newcommand\tiertwoother{Tier-2-Other}
+\newcommand\ldg{LDG}
+\acrodef{LSC}{LIGO Scientific Collaboration}
+\acrodef{LDR}{LIGO Data Replicator}
+\acrodef{LDG}{LIGO Data Grid}
+\acrodef{iLIGO}{initial LIGO}
+\acrodef{aLIGO}{advanced LIGO}
+\newacronym{\aligo}{aLIGO}{Advanced LIGO}
+
+
+% from the Observing Scenario Document
+\def\aLIGOEarly{60}
+\def\aLIGOEarlyU{40 -- 80}
+\def\aLIGOMid{100}
+\def\aLIGOMidU{80 -- 120}
+\def\aLIGOLate{140}
+\def\aLIGOLateU{120 -- 170}
+\def\aLIGOFinal{200}
+\def\aLIGOFinalBNS{215}
+\def\AdVInitial{20}
+\def\AdVEarly{40}
+\def\AdVEarlyU{20 -- 60}
+\def\AdVMid{70}
+\def\AdVMidU{60 -- 85}
+\def\AdVLate{100}
+\def\AdVLateU{65 -- 115}
+\def\AdVFinal{130}
+\def\AdVFinalBNS{145}
+
+% journals
+\providecommand{\jcap}[0]{JCAP}
+\def\aj{Astronomical Journal}                 % Astronomical Journal
+\def\apj{Astrophysical Journal}                % Astrophysical Journal
+\def\apjl{Astrophysical Journal Letters}             % Astrophysical Journal, Letters
+\def\pasj{PASJ}
+\def\apjs{ApJS}              % Astrophysical Journal, Supplement
+\def\mnras{MNRAS}            % Monthly Notices of the RAS
+\def\prd{Physical Review D}       % Physical Review D
+\def\prx{Physical Review X}       % Physical Review X
+\def\prl{Physical Review Letters}    % Physical Review Letters
+\def\cqg{Classical \& Quantum Gravity}%Classical and Quantum Gravity
+\def\nat{Nature}              % Nature
+\def\physrep{Physics Reports} % Physics Reports
+\def\na{New Astronomy}		% New Astronomy
+\def\aapr{Astronomy \& Astrophysics Reviews}	%Astronomy and Astrophysics Reviews
+\def\araa{Annual Reviews of Astronomy \& Astrophysics} 
+\def\aap{Astronomy \& Astrophysics}
+
+% other
+\newacronym{\APPEC}{APPEC}{Astro-Particle Physics European Consortium}
+\newacronym{\ILC}{ILC}{International Linear Collider}
+\newacronym{\FALC}{FALC}{Funding Agencies for Large Colliders}
+\newacronym{\ICFA}{ICFA}{International Committee for Future Accelerators}
+\newacronym{\TMT}{TMT}{Thirty Meter Telescope}

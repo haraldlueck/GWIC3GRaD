@@ -1,103 +1,194 @@
-\documentclass[fleqn,10pt]{wlscirep}
-\title{Scientific Reports Title to see here (20 words or less)}
+\documentclass[url,11pt]{article}
 
-\author[1,*]{Alice Author}
-\author[2]{Bob Author}
-\author[1,2,+]{Christine Author}
-\author[2,+]{Derek Author}
-\affil[1]{Affiliation, department, city, postcode, country}
-\affil[2]{Affiliation, department, city, postcode, country}
+\usepackage{aas_macros}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{rotating}
+%\usepackage{color}
+\usepackage[usenames,table,dvipsnames,svgnames]{xcolor}
+\usepackage{epsfig}
+\usepackage{epsf}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{indentfirst}
+\usepackage[squaren]{SIunits}
+\usepackage[T1]{fontenc}  % Turn on T1 encoding
+\usepackage[tight]{units}  % Typeset units
+\usepackage{acronym}
+\usepackage{xspace}
+\usepackage{etoolbox}
+\usepackage{comment}
+\usepackage{minitoc}
+\usepackage{appendix}
+\usepackage[left]{lineno}
+\usepackage{setspace}
+\usepackage[official]{eurosym}
+\usepackage{url}
 
-\affil[*]{corresponding.author@email.example}
+\hypersetup{colorlinks=true,
+            pdfstartview=FitV,
+            linkcolor=Sienna,
+            citecolor=MediumBlue,
+            urlcolor=IndianRed}
 
-\affil[+]{these authors contributed equally to this work}
+%\usepackage{longtable}
 
-%\keywords{Keyword1, Keyword2, Keyword3}
+%%%%%% Useful for draft editing
+\usepackage{soul}                          % provides \hl{} for highlighting
+\usepackage{ulem} \normalem 
+\newcommand{\redcomment}[1]{{\noindent\color{red}{\it [[#1]] }}}
+\newcommand{\bluecomment}[1]{{\color{blue}{\it[[#1]]}}}
+\newcommand{\magentacomment}[1]{{\color{magenta}{[[ #1]]}}}
+\newcommand{\greencomment}[1]{{\color{green}{[[ #1]]}}}
+\newcommand{\redcommenttwo}[1]{{\color{red}{[[ #1]]}}}
+\providecommand{\todo}[1]{{\color{red}$\blacksquare$~\textsf{[TODO: #1]}}}
+\newcommand{\highlight}[1]{\colorbox{yellow}{#1}}
+\newcommand{\strike}[1]{{\color{red}\sout{#1}}}
+\newcommand{\redtext}[1]{{\noindent\color{red}{\it #1 }}}
+\newcommand{\soutthick}[1]{%
+    \renewcommand{\ULthickness}{1.5pt}%
+       {\color{red}\sout{#1}}}%
+    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+\newcommand{\replace}[2]{{\soutthick{#1}\redtext{#2}}}
 
-\begin{abstract}
-Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. 
-\end{abstract}
+%\newcommand{\bluecomment2}[1]{{\color{blue}{[[#1]]}}}
+
+%% this is to single-space bullets (use itemize* or enumerate*)
+\usepackage{mdwlist}
+\setcounter{tocdepth}{2}
+
+%% spacing between captions and tables
+\usepackage{caption}
+\captionsetup[table]{skip=5pt}
+
+%% subfile package to compile separate sections
+\usepackage{subfiles}
+
+%% For the table of priorities
+\usepackage{multirow}
+\newcommand*\rot{\rotatebox{90}}
+
+%% this is for large milestone tables (text wrap and alignment within cell)
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand\secfont{\fontfamily{cmss}\selectfont}%\textwidth 5.5truein
+\newcommand\pheading[1]{\noindent{\secfont\textbf{#1}:}}
+\newcommand{\subsubsubsection}[1]{\medskip \noindent\textbf{#1} }
+
+\addunit{\parsec}{pc}
+\addunit{\annum}{a}
+\addunit{\yr}{yr}
+
+% Toggling bibio and title page for subfiles
+\def\biblio{\bibliographystyle{unsrt}\bibliography{mm_references}}
+\newtoggle{standalone}
+\toggletrue{standalone}
+
+% common definitions
+\input{defs.tex}
+
+\def\dawn{DAWN}
+\def\dawntwo{DAWN-II}
+\def\dawnthree{DAWN-III}
+
+\newacronym{\CE}{CE}{Cosmic Explorer}
+\newacronym{\ET}{ET}{Einstein Telescope}
+\newacronym{\gwic}{GWIC}{Gravitational Wave International Committee}
+\newacronym{\gwac}{GWAC}{Gravitational Wave Agencies Correspondents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Harald: file structure copied from DAWN report 2017
+%%% makevisible command for FTEs and other internal mattters
+\newcommand{\makevisible}[1]{#1}
+\newcommand{\switch}[1]{%
+  \ifthenelse{\equal{#1}{0}}{\renewcommand{\makevisible}[1]{}}{}}
+\switch{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textwidth 6in
+\oddsidemargin 0.25 in
+\textheight 8.5in
+\topmargin -0.25in
+
 \begin{document}
+\dosecttoc
 
-\flushbottom
+\def\biblio{} % avoids biblio to be reproduced for every subfiles
+\togglefalse{standalone}
+
+%\linenumbers
+
+\title{GWIC 3G R\&D subcommittee report }
+
+\author{
+  LastName1, FirstName1\\
+  \texttt{first1.last1@xxxxx.com}
+  \and
+  LastName2, FirstName3\\
+  \texttt{first2.last2@xxxxx.com}
+  \and
+  LastName3, FirstName2\\
+  \texttt{first2.last2@xxxxx.com}
+}
+
+\date{4 May 2018}
 \maketitle
-% * <john.hammersley@gmail.com> 2015-02-09T12:07:31.197Z:
-%
-%  Click the title above to edit the author information and abstract
-%
-\thispagestyle{empty}
+\tableofcontents
+\pagebreak
 
-\noindent Please note: Abbreviations should be introduced at the first mention in the main text – no abbreviations lists. Suggested structure of main text (not enforced) is provided below.
+\input{Introduction.tex}
 
-\section*{Introduction}
+\newpage
+\input{ExecSummary.tex}
 
-The Introduction section, of referenced text\cite{Figueredo:2009dg} expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+\newpage
+\input{Current_View_of_Future_Detectors.tex}
 
-\section*{Results}
+\newpage
+\input{Facilities_and_Infrastructures.tex}
 
-Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
+\newpage
+\input{Core_Optics.tex}
 
-\subsection*{Subsection}
+\newpage
+\input{Coatings.tex}
+\newpage
+\input{Cryogenics.tex}
+\newpage
+\input{Newtonian_Noise.tex}
+\newpage
+\input{Suspension_and_Isolation.tex}
+\newpage
+\input{Light_Sources.tex}
 
-Example text under a subsection. Bulleted lists may be used where appropriate, e.g.
+\newpage
+\input{Quantum_Enhancements.tex}
+\newpage
+\input{Aux_Optics.tex}
+\newpage
+\input{Sim_and_Control.tex}
+\newpage
+\input{Summary.tex}
+\newpage
+% references
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{unsrt}
+\bibliography{Biblio/2017references}
 
-\begin{itemize}
-\item First item
-\item Second item
-\end{itemize}
+\newpage
+\addcontentsline{toc}{section}{Appendix A}
+\appendix
+\input{Participants.tex}
 
-\subsubsection*{Third-level section}
- 
-Topical subheadings are allowed.
-
-\section*{Discussion}
-
-The Discussion should be succinct and must not contain subheadings.
-
-\section*{Methods}
-
-Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work.
-
-\bibliography{sample}
-
-\noindent LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, e.g.  \cite{Figueredo:2009dg}.
-
-\section*{Acknowledgements (not compulsory)}
-
-Acknowledgements should be brief, and should not include thanks to anonymous referees and editors, or effusive comments. Grant or contribution numbers may be acknowledged.
-
-\section*{Author contributions statement}
-
-Must include all authors, identified by initials, for example:
-A.A. conceived the experiment(s),  A.A. and B.A. conducted the experiment(s), C.A. and D.A. analysed the results.  All authors reviewed the manuscript. 
-
-\section*{Additional information}
-
-To include, in this order: \textbf{Accession codes} (where applicable); \textbf{Competing financial interests} (mandatory statement). 
-
-The corresponding author is responsible for submitting a \href{http://www.nature.com/srep/policies/index.html#competing}{competing financial interests statement} on behalf of all authors of the paper. This statement must be included in the submitted article file.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\linewidth]{stream}
-\caption{Legend (350 words max). Example legend text.}
-\label{fig:stream}
-\end{figure}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Condition & n & p \\
-\hline
-A & 5 & 0.1 \\
-\hline
-B & 10 & 0.01 \\
-\hline
-\end{tabular}
-\caption{\label{tab:example}Legend (350 words max). Example legend text.}
-\end{table}
-
-Figures and tables can be referenced in LaTeX using the ref command, e.g. Figure \ref{fig:stream} and Table \ref{tab:example}.
+%\input{App1GWdetectors}
+%\input{App2GWsources}
 
 \end{document}
+
