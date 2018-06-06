@@ -1,0 +1,156 @@
+\section{Suspensions and Seismic Isolation Systems}
+In this section we discuss suspensions and isolation systems for 3rd generation detectors. We have chosen to split our discussion into four areas: suspensions (especially the final stage), isolation, damping and control, and interface with cryogenics. The last two areas have overlap with the Simulation and Controls section and the Cryogenics section.
+\subsection{Current State of the Art}
+\subsubsection{Suspensions}
+The use of fused silica fibers is a well-established technique for the final stage of the suspension of fused silica test masses, leading to a monolithic suspension.  Currently there are three detectors operating with room temperature fused silica suspensions: Advanced LIGO, Advanced Virgo and GEO600. Research is ongoing on silica within these collaborations.
+The Kagra project is pursuing the use of cryogenic sapphire suspensions ( i.e. sapphire fibres supporting a sapphire test mass) working at ~20K. First operation of Kagra with its cooled sapphire suspensions is expected in 2019.
+Research on sapphire is underway at Kagra as well as Glasgow, Perugia and KEK.
+Application of silicon for future suspensions in GW detectors is under study in Glasgow, Perugia, KEK, and Caltech.
+
+\subsubsection{Isolation}
+\subsubsection{Damping and Control}
+\subsubsection{Interface with Cryogenics}
+
+
+
+\subsection{Requirements, challenges and current/planned R \& D}
+
+Suspension thermal noise and residual seismic noise are two of the dominant noise sources which limit the low frequency performance and define the low-frequency cut-off for ground based gravitational wave detectors. Thus the requirements of the suspension and isolation systems are to a great extent set by what the target low end of the operating frequency band is chosen to be, as well as by the intrinsic seismic levels of the chosen site.
+
+\subsubsection{Suspensions}
+
+\subsubsubsection{Silica suspensions}
+The use of fused silica is a well-established technique in both aLIGO and AdVIRGO,  and Perugia/EGO/VIRGO and Glasgow/aLIGO already have significant expertise. For future detectors at room temperature  we will aim to further reduce the suspension thermal noise. This is likely to involve suspension of heavy mirrors, up to several hundred kg, making the fibers as long as practicable, and making them relatively thinner to push down the bounce modes and push up the violin modes.  Ensuring robust techniques are available to handle the heavier masses will be an engineering challenge.
+ 
+Moving to larger test masses will require rescaling the thermoelastic cancellation region to an appropriate diameter ref1. Pushing to lower bounce mode and higher violin mode frequencies will require a thinner central diameter fibre. This could result in operation at higher stress than currently used - around 1.2GPa-1.5GPa refs2,3. This will require some robustness testing to ensure suitably strong fibres for the detector lifetime (see ref4 for a general overview of suspension thermal noise reduction). Fused silica typically has a strength of 4-5GPa refs5,6.
+
+Upgraded and enhanced silica fibre pulling/welding machines will be required to  pull the longer fibres and to weld from thicker stock material. Utilising thicker stock will reduce the loss component due to the weld and provide further improvement in the suspension thermal noise ref8. 
+
+Pristine silica fibers are intrinsically strong, but need careful handling as well as protection from being accidentally touched. AdVirgo and aLIGO have experienced fiber breakages at some stage during assembly, installation or operation. Minimising the risk of touching, via well engineered installation tooling, is important to reduce downtime and should be taken into consideration in any revised suspension design, assembly and installation steps. AdVirgo has adopted a suspension solution that has fibers with two anchors, one at each end, to simplify the process of the removal and replacement of fibers. (see ref7). In aLIGO, fibers can be cut off at the ears on the mirror and new fibers welded in. Depending on the circumstances, in both designs there may be enough release of energy that the ears on the mirror could become too damaged to re-use without rework. Thus having spare mirrors ready is advantageous. 
+
+\subsubsubsection{Sapphire and silicon suspensions}
+There are several challenges involved in going to cryogenic temperatures, where silicon or sapphire are the materials of choice.
+Suspending heavy mirrors with thick fibers/ribbons (for heat extraction) will need a smart design to ‘soften’ the vertical and horizontal modes. Selection of material depends on the possibility to bond the suspensions elements to the test masses of the same material or different ref10. A significant challenge with 20K operation is the need to extract any deposited power via the fibres, which in turn drives their cross sectional area and vertical stiffness. Operation at ~120K is less challenging for heat extraction.
+
+Cooling time is also a potential issue, as the timeline to commission such a detector maybe driven by the several weeks to cool/warm up between vents. Currently there are efforts to work on mechanical heat links that can be removed. A cooling exchange gas is also a possibility, although may not used due to concerns about residual vacuum level.
+
+The challenges above are common for sapphire/silicon. Sapphire as a material is transparent so can utilise traditional wavelengths. However, polishing/figuring and fabrication of fibres can be challenging due to material hardness. Laser heated pedestal growth, micro-pull down or machining (e.g. IMPEX) are techniques to fabricate fibres.
+
+Silicon is a more standard material but requires 1500nm or greater wavelength. Material is more readily available in large size although the challenge will be getting sufficient purity. Fibre fabrication is at an early stage, although laser heated pedestal growth, micro-pull down or etching from wafers look possible.
+
+The work of KAGRA is ground-breaking, leading to the first full stage sapphire suspensions operating at low temperature. The community will have a much better feel of where effort needs to be applied, but this will likely be in the area of sapphire/silicon fibre fabrication and testing (thermal conductivity, mechanical loss). Springs also need to be developed for the final stage suspensions at 20K as the vertical mode is high frequency and in-band.
+
+A full design needs to be tested (KAGRA is pushing in this direction), but bonding, thermal extraction and losses need to be assessed/modelled. Moveable earthquake stops are probably needed to account for thermal expansion. A small scale (kg or larger) silicon prototype would be a valuable addition to the field to properly assess material losses [11].
+
+Excess losses like clamping or bonding losses need to be studied with care. The challenge is to have a suspension dissipation dominated by the material thermal noise and not by the thermoelastic or other losses. Dissipation at the level of upper and lower clamps, thermoelastic losses for various geometries, surface losses (in case of geometries with S/V big), bonding loss [12]
+
+It is useful to note that typically it takes 10-15 year to get the hardware from prototype-interferometer, so the prototypes are an essential step in the near future.
+
+The fabrication methods for silicon and sapphire suspension fibers is an area which requires significant research. The way to assemble and/or to produce fibers/ribbons with different geometries is demanding. The various geometries will influence the way to clamp and assemble the whole suspension. For sapphire a laser heated pedestal growth, micro-pull down or direct machining will lead to circular cross section fibres. Some research focussed on fabrication/modelling would be beneficial.
+
+For silicon, laser heated pedestal growth will lead to circular fibres, while micro-pull-down techniques ref17 can give circular or ribbon geometries. Direct etching from a wafer would give ribbons. Rectangular fibres have the challenge that the energy leakage into the neck is larger, unless the geometry can be flared out quickly, and this can lead to larger loss due to energy deposition in the bond region ref18
+
+\subsubsubsection{Bonding}
+
+Hydroxy-catalysis bonding (HCB) [24] is well known and has been used in GEO600, Virgo+, AdLigo, AdVirgo and Kagra fro assmbeling monolithic suspeensions.  It appears to work as expected in the present detectors, both at room temperature and cryogenics [25]. The strength, quality and losses have been measured for SiO2-SiO2, Al2O3-Al2O3 and Si-Si [22, 23].   There is some fine tuning which could be investigated regarding teh use of HCB, given small differences in the techniques used in Virgo and LSC, but common tests are already foreseen to establish general shared rules for the best results for application to 3G detectors.
+
+Gallium bonding at the present time has been used in Kagra to connect the nail heads of the fibers to the upper Sapphire springs and to the lower mirror ears but still needs to be verified in working conditions,  More research is needed on the Ga-bonding, for exmaple to  investigate the dissipation levels.  Different connecting materials such as indium are also of interest [24], [26]). 
+
+In general the quality of the bonding depends mainly on the polishing of the surfaces and on the mechanical precision of the components to be connected. Thus investigation of the assembly structures is required. To develop a very low dissipation suspension, precision in positioning the various components is important, and this is even more urgent in case of cryogenic suspensions where the bonding represents a discontinuity to the thermal flux and the mechanical tolerances are lower because of the rigidities of the system itself.
+
+\subsubsubsection{Modelling}
+
+
+Modelling of suspensions are important for understanding overall behaviour. Various groups have carried out simulations and modelling including dynamics of fiber suspensions (ref19) and violin mode splitting and long term stability, which ultimately feeds back into control of these modes (ref9). FEA analysis is an important tool as a cross check to design the best strategy to produce and realize the lower stage suspension. The losses and the heat fluxes can be simulated as well, even if the parameters need to be verified experimentally. A complete FEA with the various geometries, losses and thermal parameters is demanding. Linking the FEA analysis of the lower suspension stage with the codes used to estimate interferometer performance (e.g. GWINC) is of value.
+
+Further activities which focus on modelling glitches in the detector will also be beneficial as instruments push to better strain sensitivity at lower frequencies [20]
+
+\subsubsubsection{Upper Stages of Suspensions}
+The work descibed above has focussed on the final stage of a suspension, i.e. the stage directly supporting the test mass. However consideration should also be put into the maraging steel blade springs and metal components at the upper stage(s) of the suspension, to ensure they do not limit thermal noise performance of the final stage. For example research into alternative materials for the blades, with lower loss than maraging steel, is an area worth pursuing. Kagra already incorporate sapphire springs at their final stage. Silicon is another material which can be considered. The challenges for using these materials include achieving a robust design with high breakign stress. Work on protective coatings, mechanical loss and thermal conductivity also need to be pursued.
+
+\subsubsection{Isolation}
+\subsubsection{Damping and Control}
+\subsubsection{Interface with Cryogenics}
+
+Here are some notes which Norna received concerning cryogenics and suspensions - to be combined with other input
+
+Heat conduction
+Challenge
+Maximise the heat extraction is the main condition for developing a cryogenic suspension. The suspensions will work better if the discontinuities (i.e. geometrical constraints, bondings) will be removed or as less as possible. The choice of the material and the best suspension configuration will be defined. The cryogenic suspension is by definition ‘out of thermal equilibrium’ and this needs to be evaluated correctly.
+
+Cooling time is also a potential issue, as the timeline to commission such a detector maybe driven by the several weeks to cool/warm up between vents. Currently there are efforts to work on mechanical heat links that can be removed. A cooling exchange gas is also a possibility, although may not used due to concerns about residual vacuum level.
+
+State of the art
+The only cryogenic complete suspension has been realized for Kagra [21]. On our point of view a careful analysis needs to start from that one.
+Research needed
+The research on the various components that form the whole suspension is important as well as all the interconnections like the clampings or the bondings. 
+
+Bibliography
+
+[21] R Kumar et al 2016 J. Phys.: Conf. Ser. 716 012017
+
+\subsection{Pathways and required facilities}
+\subsection{Type of collaboration required:  small/large}
+\subsection{Suggested mechanisms}
+\subsection{Impact/relation to 2G and upgrades}
+
+refs (to be moved).
+
+1 Experimental results for nulling the effective thermal expansion coefficient of fused silica fibres under a static stress. Classical and Quantum Gravity, 31(6), 065010. (doi:10.1088/0264-9381/31/6/065010)
+
+2 Heptonstall, A. et al. (2014) Enhanced characteristics of fused silica fibers using laser polishing. Classical and Quantum Gravity, 31(10), p. 105006. (doi:10.1088/0264-9381/31/10/105006)
+Bell, C. J., Reid, S., Faller, J., Hammond, G. D., Hough, J., Martin, I. W., Rowan, S. and Tokmakov, K. V. (2014) 
+
+3 Aisa, D. et al. (2016) The Advanced Virgo monolithic fused silica suspension. Nuclear Instruments and Methods in Physics Research Section A-accelerators spectrometers detectors and associated equipment, 824
+
+4 Hammond, G., Hild, S. and Pitkin, M. (2014) Advanced technologies for future ground-based, laser-interferometric gravitational wave detectors. Journal of Modern Optics, 61(Sup. 1), S10-S45. (doi:10.1080/09500340.2014.920934)
+
+5 Tokmakov, K.V., Cumming, A., Hough, J., Jones, R., Kumar, R., Reid, S., Rowan, S., Lockerbie, N.A., Wanner, A. and Hammond, G., (2012) A study of the fracture mechanisms in pristine silica fibres utilising high speed imaging techniques. Journal of Non-Crystalline Solids, 358(14), pp. 1699-1709. 
+(doi:10.1016/j.jnoncrysol.2012.05.005)
+
+6 Amico, P., Bosi, L., Carbone, L., Gammaitoni, L., Marchesoni, F., Punturo, M., Travasso, F., Vocca, H. (2002) Monolithic fused silica suspension for the Virgo gravitational waves detector. Review of Scientific Instruments, 73(9). (DOI: 10.1063/1.1499540)
+
+7 Travasso, F. on behalf of Virgo Collaboration (2018) Status of the Monolithic Suspensions for Advanced Virgo. IOP Conf. Series: Journal of Physics: Conf. Series 957 (2018) 012012  (doi:10.1088/1742-6596/957/1/012012)
+
+8 Hammond, G.D., Cumming, A.V., Hough, J., Kumar, R., Tokmakov, K., Reid, S. and Rowan, S. (2012) Reducing the suspension thermal noise of advanced gravitational wave detectors. Classical and Quantum Gravity, 29(12), Art. 124009. (doi:10.1088/0264-9381/29/12/124009)
+
+9 https://dcc.ligo.org/LIGO-G1700038
+
+10 Cumming, A.V. et al. (2013) Silicon mirror suspensions for gravitational wave detectors. Classical and Quantum Gravity, 31(2), 025017. (doi:10.1088/0264-9381/31/2/025017)
+
+11 Nawrodt, R. et al. (2013) Investigation of mechanical losses of thin silicon flexures at low temperatures. Classical and Quantum Gravity, 30(11), p. 115008. (doi:10.1088/0264-9381/30/11/115008)
+
+12 K. Haughian et al., Mechanical loss of a hydroxide catalysis bond between sapphire substrates and its effect on the sensitivity of future gravitational wave detectors, Phys. Rev. D 94, 082003 – Published 12 October 2016
+
+13 Alshourbagy, M. et al. (2006) Measurement of the thermoelastic properties of crystalline Si fibres. Classical and Quantum Gravity 23(8) (doi.org/10.1088/0264-9381/23/8/S35)
+
+14 Alshourbagy, M. et al. (2006) First characterization of silicon crystalline fibers produced with the mu-pulling technique for future gravitational wave detectors. Review of Scientific Instruments, 77(4) (doi.org/10.1063/1.2194486)
+
+15 Amico, P., Bosi, L., Gammaitoni, L., Losurdo, G., Marchesoni, F., Mazzoni, M., Parisi, D., Punturo, M., Stanga, R., Toncelli, A., Tonelli, M., Travasso, F., Vetrano, F., Vocca, H. (2004) Monocrystalline fibres for low thermal noise suspension in advanced gravitational wave detectors. Classical and Quantum Gravity, 21(5) (doi.org/10.1088/0264-9381/21/5/094)
+
+16 Cumming, A.V. et al. (2013) Silicon mirror suspensions for gravitational wave detectors. Classical and Quantum Gravity, 31(2), 025017. (doi:10.1088/0264-9381/31/2/025017)
+
+17 www.infn.it/thesis/PDF/getfile.php?filename=781-Alshourbagy-dottorato.pdf
+
+18 Cumming, A.V. et al. (2013) Silicon mirror suspensions for gravitational wave detectors. Classical and Quantum Gravity, 31(2), 025017. (doi:10.1088/0264-9381/31/2/025017)
+
+19 Lorenzini, M., Cagnoli, G., Campagna, E., Cesarini, E., Losurdo, G., Martelli, F., Vetrano, F., Vicere', A. (2010) The dynamics of monolithic suspensions for advanced detectors: A 3-segment model. J. Phys.: Conf. Ser. 228. (doi.org/10.1088/1742-6596/228/1/012017)
+
+20 https://dcc.ligo.org/LIGO-G1501237
+
+21 R Kumar et al 2016 J. Phys.: Conf. Ser. 716 012017
+
+22 Dari, A., Travasso, F., Vocca, H., Gammaitoni, L. (2010) Breaking strength tests on silicon and sapphire bondings for gravitational wave detectors. Classical and Quantum Gravity, 27(4). (doi.org/10.1088/0264-9381/27/4/045010)
+
+23 Amico, P., Bosi, L., Carbone, L., Gammaitoni, L., Punturo, M., Travasso, F., Vocca, H. (2002) Fused silica suspension for the VIRGO optics: status and perspectives. Classical and Quantum Gravity, 19(7). (doi.org/10.1088/0264-9381/19/7/359)
+
+24 van Veggel, A.-M. A. and Killow, C. J. (2014) Hydroxide catalysis bonding for astronomical instruments. Advanced Optical Technologies, 3(3), pp. 293-307. (doi:10.1515/aot-2014-0022)
+
+25 K. Haughian et al., Mechanical loss of a hydroxide catalysis bond between sapphire substrates and its effect on the sensitivity of future gravitational wave detectors, Phys. Rev. D 94, 082003 – Published 12 October 2016
+
+26 Hofmann, G. et al. (2015) Indium joints for cryogenic gravitational wave detectors. Classical and Quantum Gravity, 32(24), 245013. (doi:10.1088/0264-9381/32/24/245013)
+
+27 Murray, P. G., Martin, I. W., Cunningham, L., Craig, K., Hammond, G. D., Hofmann, G., Hough, J., Nawrodt, R., Reifert, D. and Rowan, S. (2015) Low-temperature mechanical dissipation of thermally evaporated indium film for use in interferometric gravitational wave detectors. Classical and Quantum Gravity, 32(11), 115014. (doi:10.1088/0264-9381/32/11/115014)
+
+
+
