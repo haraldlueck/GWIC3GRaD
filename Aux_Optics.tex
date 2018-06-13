@@ -1,6 +1,51 @@
 \section{Auxiliary Optics}
 \subsection{Current State of the Art}
 \subsubsection{Input optics}
+\paragraph{Introduction}
+In all the ground-based laser-interferometric gravitational wave detectors, the light which is injected into the main interferometer comes from high power lasers operating at 1064nm, with powers which could exceed 100 W (maximum 200W). Their frequency stability in the detection frequency band (10Hz-10kHz) is what you can find as the best in the world. Similarly, the relative intensity noise (RIN) of the laser beam is at the state of the art in laser power stabilization (2.10$^{-9}$/$\sqrt(Hz)$). Their spatial eigenmode is very close to an ideal Gaussian mode. In a first paragraph, we will give an overview of the function carried out by the Input optics. Hereafter we will describe the IO subsystem with some peculiarities for Virgo and LIGO.
+
+\paragraph {Overview}
+
+The Input Optics is the interface between the laser system and the Interferometer. It is also part of the Pre-stabilized laser. The whole system delivers a beam at the interferometer input port with the required power, geometrical shape, frequency and angular stability. An Electro Optic Modulation (EOM) system is providing the RF modulations needed for control and sensing purposes. The Input Mode Cleaner (IMC) cavity geometrically cleans the beam and reduces its amplitude and lateral fluctuation. The resonant IMC in conjunction with a reference cavity (RFC) are used to stabilize the laser frequency.
+After the IMC some photodetectors provide the signal for intensity stabilization of the laser. An in-vacuum Faraday isolator prevents the light reflected by the interferometer goes back to the laser system and allows a simple extraction of this reflected beam. Finally, a mode matching telescope is used to properly match the beam on the Interferometer.
+
+\paragraph {Wavelength and power handling}
+In the first and second generation of GW detectors based on laser interferometers, the working wavelength is 1064nm which is produced by Nd:YAG solid state lasers. The power of the laser source in the first generation was of the order of a few tens of Watts which became a few hundred of Watts for the second generation. Up to now the detectors have been operated at a maximum of 50Watts injected in the interferometer but the plan is to reach 125Watts in the later developments of this generation. Due to the high power densities in the optical components such as the EOM system and the Faraday isolator, those devices has been specially developed for the Gravitational Wave detectors. 
+
+\paragraph {Electro optic modulation system}
+State of the art of the EOMs currently used will be given here.
+
+\paragraph {Faraday isolators}
+State of the art of the FIs currently used will be given here.
+
+\paragraph {Input mode cleaner}
+State of the art of the IMC cavities currently used will be given here.
+Why Geo uses 2 IMCs?
+
+\begin{table}[htp]
+\begin{tabular}{@{}l c c c c c@{}}
+Parameter & LIGO & Virgo & GEO & &Kagra\\
+       &  &   &  IMC1  & IMC2 &  \\
+\hline
+Optical cavity length & 32.945 m & 286.845 m & 8 m & 8.1 m & 53.3m (TBC)\\
+Free spectral range & 9,099,786 Hz & 1,045,137 Hz & 37.48 MHz & 37.12 MHz &\\
+Radius of curvature of MC2 & 27.27 m & 185.1 m& & &\\
+Flat mirror transmissivities & 6000 ppm & 2880 ppm & & & 6000 ppm \\
+MC2 transmissivity & 5 ppm & 2.2 ppm & & &< 200ppm\\
+Cavity Pole frequency & 8.72 kHz & 520 Hz & & & \\
+\hline
+\end{tabular}
+\label{IMC cavities main parameters}
+\end{table}
+
+
+\paragraph{Mode matching telescope}
+MMT will be described here and some references will be given.
+\paragraph {Performances and issues}
+ In this paragraph we will describe the performances obtained (firstly underlining that GW have been detected both with LIGO and Virgo). Then, we can write a few sentences on the beam jitter which represents one of the most annoying technical noises we can find at the level of the IO in the current generation. There are some possible mitigations (such as increasing beam jitter reduction in vacuum as underlined by Matt and proposed in Ligo (See Jitter Attenuation Cavity \url{https://dcc.ligo.org/LIGO-T1600595})
+
+
+
 \subsubsection{Output optics}
 \subsubsection{Active wavefront control}
 \subsubsection{Stray light control}
