@@ -3,31 +3,84 @@
 \redtext{Freise, Adhikari}
 
 \url{https://gilsay.physics.gla.ac.uk/dokuwiki/doku.php?id=gwic_3g_rad:simulations_and_controls}
-
+\subsection{Simulations}
 \subsection{Current State of the Art}
-In most cases, classical control methods (essentially pole placement) are used to minimize the spectral density of the particular error signal.
+\redtext{H. Yamamoto, Degallaix, Freise}
+
+\subsection{Requirements}
+\begin{enumerate}
+\item Steady-state simulation (e.g. Optickle, Finesse)
+\item time domain simulations (lock acquisition)
+\item FFT models for spatial modeling
+\item Parametric Instability (\redtext{S. Gras, C. Blair})
+\item Kalman filters for thermal model of mirrors
+\end{enumerate}
+\subsubsection{3G initial}
+what simulations needed for 3G?
+
+\subsubsection{4G future}
+what additional simulations needed for 4G only?
+
+\subsection{Pathways and Required Facilities}
+\begin{itemize}
+\item Working groups
+\item workshops
+\item Prototypes ?
+\end{itemize}
+
+\subsection{Type of Collaboration Required:  small/large}
+\redtext{Freise}
+
+\subsection{Suggested mechanisms}
+\redtext{Freise}
+
+\subsection{Impact/relation to 2G and upgrades}
+\redtext{Freise}
+
+% ----------------------------------------------------------------
+\subsection{Controls}
+\redtext{Adhikari}
+\subsubsection{Current State of the Art}
+\redtext{Ward, Coyne, Adhikari}
+
+In most cases, classical control methods (essentially pole placement)
+are used to minimize the spectral density of the particular 
+error signal.
 
 There are a few examples of the implementation of more modern techniques:
 \begin{enumerate}
-\item Global feed-forward of seismic noise to platforms and suspensions
+\item Global feed-forward of seismic noise to platforms
+      and suspensions.
 
 \item $\mu$-Synthesis approach for limited angular control
 
-\item Feed-forward sensor noise subtraction (removal of seismic noise from WFS)
+\item Feed-forward sensor noise subtraction 
+      (removal of seismic noise from WFS)
 
-\item Parametric Instability damping by PLL and damping through aliasing of high frequency signals.
-
-
+\item Parametric Instability damping by PLL and damping through 
+      aliasing of high frequency signals.
 \end{enumerate}
 
-\subsection{Requirements}
-\subsubsection{3G initial}
-\subsubsection{future}
+\subsection{Examples}
 
-\subsection{Pathways and Required Facilities}
+\subsection{Alignment Sensing \& Controls}
+\redtext{Grote}
+The alignment fluctuations at low frequencies are difficult to control due to the large micro-seismic motion and the Sigg-Sidles instabilities. The feedback controls noise is a limiting noise source at the lowest end of the GW band.
 
-\subsection{Type of Collaboration Required:  small/large}
+\begin{itemize}
+\item Better sensors
+\item Better loops
+\item Mirror spot image processing for centering
+\item scattered light mitigation
+\item vibration noise coupling to sensors
+\end{itemize}
 
-\subsection{Suggested mechanisms}
 
-\subsection{Impact/relation to 2G and upgrades}
+\subsection{A Quantum Interferometer Component: The Pre-Amplifier}
+\redtext{D. Martynov, H. Miao}
+
+
+\subsection{FEM of Mechanical Structures}
+\redtext{G. Venugopalan, A. Markowitz}
+
+

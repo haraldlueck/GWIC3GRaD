@@ -1,5 +1,43 @@
 \section{Cryogenics}
+\label{s:Cryogenics}
+A feature of most designs for future interferometers, is the 
+cryogenic~\footnote{which we define here to be less than 123\,K; the range from 80\,--\,123\,K may be considered as "high temperature cryogenics"} operation of the test mass mirrors\cite{ET, Voyager}.
+
+In the GW field, there is a long history of using cryogenic resonant mass detectors\cite{coldBars}, as well as the recent operation of the CLIO and KAGRA interferometers in Japan.
+
+\paragraph{Thermal Noise}\mbox{}\\
+The primary benefit of low temperature operation of the mirrors is through the reduced thermal noise:
+\begin{itemize}
+\item Brownian noise of mirror substrate
+\item Brownian noise of mirror coating
+\item thermo-optic (thermo-elastic and thermo-refractive) noise
+\end{itemize}
+The relation between the dissipation and the power spectrum of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959}:
+\begin{equation}
+S_x(f) = \frac{k_B T}{\pi^2 f^2} \left| Re \big[ Y(f) \big]\right|
+\label{eq:FDT}
+\end{equation}
+and so we see that the displacement noise, $x(f)$, scales as $\sqrt{T}$. More significantly, many of the material properties of mirror substrates (e.g. sapphire and silicon) and coatings (e.g. GaAs, GaP, $\alpha$-Si), scale in a favorable way with decreasing temperature. This makes the improvement in the noise substantially larger than the naive $\sqrt{T}$ scaling.
+
+\paragraph{Robust Operation}\mbox{}\\
+In addition to the noise improvement, there are a number of operational issues affected by a low temperature environment:
+\begin{enumerate}
+\item Increased thermal conductivity in crystalline substrates; this dramatically reduced the thermal gradients in the mirror, and thereby, the induced wavefront distortions due to thermo-elastic deformations of the mirror surface and thermo-refractive lensing in the substrate bulk.
+
+\item zero thermal expansion in silicon at 18 and 123\,K
+
+\item ???
+\end{enumerate}
+
+
+
 \subsection{Current State of the Art}
+\begin{itemize}
+\item cryogenic bars
+\item CLIO
+\item KAGRA
+\item silicon Fabry-Perot cavities for atomic clocks (JILA, PTB)
+\end{itemize}
 \subsection{Requirements}
 \subsubsection{3G initial}
 \subsubsection{future}
