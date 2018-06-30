@@ -45,17 +45,86 @@ MMT will be described here and some references will be given.
 \paragraph {Performances and issues}
  In this paragraph we will describe the performances obtained (firstly underlining that GW have been detected both with LIGO and Virgo). Then, we can write a few sentences on the beam jitter which represents one of the most annoying technical noises we can find at the level of the IO in the current generation. There are some possible mitigations (such as increasing beam jitter reduction in vacuum as underlined by Matt and proposed in Ligo (See Jitter Attenuation Cavity \url{https://dcc.ligo.org/LIGO-T1600595})
 
-
-
 \subsubsection{Output optics}
-\subsubsection{Active wavefront control}
-\subsubsection{Stray light control}
-\subsubsection{Other auxiliary optics}
+\paragraph {Output mode cleaner}
+\paragraph{Photodetectors}
+\paragraph{Balanced homodyne detection}
+\paragraph{Filter cavities}
+\paragraph{Low-loss Faraday isolator}
 
-\subsection{Requirements}
-\subsubsection{3G initial}
-\subsubsection{future}
-\subsection{Pathways and required facilities}
-\subsection{Type of collaboration required:  small/large}
-\subsection{Suggested mechanisms}
+\subsubsection{Active wavefront control}
+\paragraph{Core optics thermal compensation}
+\paragraph{Input mode matching}
+\paragraph{Output mode matching}
+\paragraph{Mismatch sensing}
+
+\subsubsection{Stray light control}
+\paragraph{Baffles}
+\paragraph{Optics}
+
+\subsubsection{Other auxiliary optics}
+\paragraph{Optical levers}
+\paragraph{Phase cameras (in AWC instead?)}
+\paragraph{Hartman wavefront sensors (in AWC instead?}
+\paragraph{Alignment sensing schemes}
+
+\subsection{Requirements and current/planned R\&D}
+\subsubsection{Survey of current R\&D}
+Here we will put in the results of the survey on who is doing what.
+
+
+The remainder of this section is subdivided into a discussion of the requirements for each auxiliary optics subcategory in the context of laser wavelengths between 1 and 1.55\,$\mu$m and 1.55\,$\mu$m and above. Where there is expected to be no major difference between the R\&D required for both wavelength ranges, the R\&D will be described in the section for the shorter wavelength range only. 
+\subsubsection{1-1.55\,$\mu$m laser wavelength R\&D requirements}
+\paragraph{Input optics}
+In that wavelength range, we don’t expect particular issues with respect to the 2G. The main issue might concerns scattered light management and beam jitter mitigation.
+We mostly rely the developments which have been made for the first and second generation of GW detectors at 1.064 um. For 1.55um, there will be for sure the need of R\&D on wavelength dependent optical devices such as the Faraday isolator especially if we want to work at very high power at 1.55um. Some R\&D activities are already planned in several groups (IAP, UF and EGO) so we don’t expect major issues on that point.
+Below we just list the most important sub-parts of the IO.
+-	High power Faraday isolator for 1 and 1.55 um R\&D on-going.
+-	EOMs. Seems to be under control but might be needed to think about RAM noise.
+-	Complex modulation - can be used to minimize am (better control of locking point offsets). R\&D ongoing.
+-	Fast alignment actuators. Alignment sensing and/or control. R\&D ongoing.
+-	Flat beam generators (LG modes etc.). Not much active research recently.
+-	Input mode cleaner and frequency stabilization scheme (not R\&D more related to design choices). 
+
+\paragraph{Output optics}
+The main point will consist in mitigating the scattered light which is armful for the Interferometer sensitivities in the second generation of GW detector.
+R\&D activity on OMC could be useful?
+
+\paragraph{Active wavefront control}
+At 1um we can base the TCS system on what has been used in the second generation GW detectors.
+At 1.55um, it could be required to change the actuation techniques if we change the test mass material.
+
+\paragraph{Stray light mitigation}
+The light absorption from the baffles is very dependent on the wavelength. So it is likely that what will work at 1um but not at 1.55 um. R\&D will be required to find new materials suitable for 1.55um.  
+
+\paragraph{Other auxiliary optics}
+\bf{Optical levers}
+Increasing the length of the arm cavities can represent a problem from the optical levers point of view. A preliminary study should be done in order to understand the requirements on the suspended optics residual motion tolerated to be able to lock the arm cavities (40 km is quite long!).
+
+\bf{Alignment sensing schemes}
+
+
+\subsubsection{1.55+\,$\mu$m laser wavelength R\&D requirements}
+\paragraph{Input optics}
+\paragraph{Output optics}
+\paragraph{Active wavefront control}
+\paragraph{Stray light mitigation}
+\paragraph{Other auxiliary optics}
+
+% \subsubsection{3G initial}
+% \subsubsection{future}
+\subsection{Pathways, required facilities, collaborations and mechanisms}
+
+\subsubsection{Type of collaboration required:  small/large}
+\begin{itemize}
+\item Collaborations between groups working on the different AO topics identified. 
+\item Collaborations between AO and other subtopics (e.g. facilities, light sources, quantum noise etc.)
+\end{itemize}
+\subsubsection{Suggested mechanisms}
+
 \subsection{Impact/relation to 2G and upgrades}
+\paragraph{Input optics}
+\paragraph{Output optics}
+\paragraph{Active wavefront control}
+\paragraph{Stray light mitigation}
+\paragraph{Other auxiliary optics}
