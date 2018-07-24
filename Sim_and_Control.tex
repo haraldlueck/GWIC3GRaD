@@ -1,13 +1,118 @@
 \section{Simulation and Controls}
 \label{sec:SimControls}
 \redtext{Freise, Adhikari}
+Wiki: \url{https://gilsay.physics.gla.ac.uk/dokuwiki/doku.php?id=gwic_3g_rad:simulations_and_controls}
 
-\url{https://gilsay.physics.gla.ac.uk/dokuwiki/doku.php?id=gwic_3g_rad:simulations_and_controls}
+List of r+d topics collected on and tranferred from the Wiki:
+\begin{itemize}
+\item advancing IFO control systems:  alignment sensing and control,
+  long baseline / high Finesse length sensing and control,  parametric
+  instabilities (opto-mechanical, as well active/passive damping),
+  mode sensing, wavefront sensing and control, compatibility of
+  optical systems with LG modes.
+\item modern controls: optimal MIMO (multiple-input multiple-output)
+  sensing and control, noise-subtraction (online, offline, supervised
+  learning),  robust, automatic filter design, sensor blending, Neural
+  Networks for feedback optimization
+\item seismic isolation: global low frequency control, tilt sensing
+  (6D sensing),  low-noise local controls
+\item quantum noise reduction: filter cavity control (passive,
+  active),  optical spring control (passive, active), fundamental
+  quantum limit, active filters, polarisation schemes, loss, cross
+  coupling, speedmeter schemes, optical properties, noise coupling,
+  control high-frequency detectors (generally, not-full-band
+  detectors), integration of Quantum Information error correction
+  techniques
+\item suspension Design: Finite Element Analysis of mechanical
+  structures (thermal noise and vibration isolation), Electro-magnetic
+  suspensions, High Q Blade Springs (sapphire, silicon, silica, glassy
+  metals, etc.), Force noise from electric charge and electric field fluctuations
+\item scattering: simulations of scattered light, simulations on
+  active mitigation of backscatter
+\end{itemize}
+
+
 \subsection{Simulations}
+Interferometric gravitational-wave detectors are sufficiently
+complicated optical systems that detailed modeling is required for
+design and performance studies.  The detector behaviour cannot be
+modelled with commercially available optical simulations because
+our requirements are very different from conventional systems. 
+The first simulation tools for modelling laser interferometers
+for gravitational wave detectors were developed to aid the design
+and analysis of prototype interferometers and the first generation
+of detectors, leading to two large time-domain packkages, 
+ the End-to-End model for LIGO also known as `E2E'  and `SIESTA'
+in the Virgo collaboration, plus the first generations of FFT codes.
+For the design of the next generation, known collectively as
+`advanced detectors', the need for better simulation tools was
+highlighted. A dedicated effort spun out from the 
+LSC Advanced Interferometer Configuration
+working group resulted in significantly advanced smaller
+tools, for example for FFT-based modelling of the thermal deformation 
+of the main optics,  or fast mode-based tools for control design, 
+noise propagation and commissioning. 
+
+The planned upgrades to the detectors include either new technologies
+or envisage pushing detector parameters closer to their limits. In both cases the 
+detector design and commissioning face new challenges, as
+previously used assumptions and simplifications can 
+no longer be used. Simulation tools and the understanding
+of interferometer modelling have to be advanced ahead of time
+in order to be able to provide the essential design and commissioning
+support. For example, some simulation
+tools are being extended to allow the study of advanced 
+quantum noise reduction schemes, more accurate predications
+of scattering and other opo-mechanical couplings, such
+as parametric instabilities. Further, the integration of mechanics and
+electronic into mode based tools has been started to aid the 
+controls effort, e.g. for modern controls with global multi-input 
+multi-output strategies.
+
 \subsection{Current State of the Art}
-\redtext{H. Yamamoto, Degallaix, Freise}
+\begin{itemize}
+\item Simulations which use the FFT for propagating paraxial beams such as
+SIS or OSCAR can be used to make
+detailed predictions about the impact of optical phase errors (surface
+roughness, phase distortions, etc.)  and finite aperture sizes.
+\redtext{H. Yamamoto, Degallaix}
+\item For understanding interferometer dynamics over a wide range of
+conditions which do not allow for linearization time-domain
+simulations are the most 
+appropriate tools. However, this type of simulation is slow and
+is in practise used only for modelling the lowest transverse-spatial
+modes.
+\redtext{ ? }
+\item 
+The commissioning of advanced detectors, as well as the design of further 
+upgrades have shown that the combination of frequency domain 
+simulations with paraxial beam propagation has become crucial
+to understand interferometer limitations. Geometric instabilities and thermal
+beam distortions, both due to higher laser power, can dominate the
+interferometer behaviour. Modelling tasks related
+to alignment sensing and control, parametric instabilities, or simply
+the  effect of mode mismatch or beam clipping on the control systems and
+ultimately on the gravitational wave signal have taken center stage.
+Simulation tools that use higher-order mode
+expansion to describe the laser beam properties can combine the speed
+of frequency domain tools with the power of paraxial
+beam propagation.  Further development is ongoing to improve their performance and to
+add more advanced features.
+\redtext{ Freise, Brown}
+\item In addition to numerical interferometer models, the community
+  has developed configuration level simulation that operate at a
+  higher level in that the response of a given optical configuration
+  is symbolically computed and parameterized.
+These symbolic computations can be
+compared with the more detailed numerical results given by frequency
+domain codes.  While inappropriate for detailed simulation of the
+optical plant, this approach is very effective for an initial
+exploration of a parameter space for a variety of optical configurations.  \redtext{ ? }
+\end{itemize}
 
 \subsection{Requirements}
+Description of simulation requirements that follow from example 
+challenges in detector design and commissioning.
 \begin{enumerate}
 \item Steady-state simulation (e.g. Optickle, Finesse)
 \item time domain simulations (lock acquisition)
@@ -15,16 +120,84 @@
 \item Parametric Instability (\redtext{S. Gras, C. Blair})
 \item Kalman filters for thermal model of mirrors
 \end{enumerate}
-\subsubsection{3G initial}
-what simulations needed for 3G?
 
-\subsubsection{4G future}
-what additional simulations needed for 4G only?
+\subsubsection{3G initial}
+Each improvement in detector sensitivity will uncover new unwanted 
+noise coupling mechanisms that typically require post-hoc
+mitigation strategies. This implies that for the designs of
+future detectors, we must model and study potential designs at 
+greater depths than previous detectors.
+Initial interferometers in new faculties
+could be based on the technologies developed for the
+upgrades of current facilities, such as LIGO Voyager.
+The envisaged upgrades will possibly introduce 
+significant changes, such as cryogenic
+suspensions and a different laser wavelength. 
+The main challenge will be the operation  at very high circulating 
+power (several MW). For the initial design a more  consistent
+modelling of control noises is required  to reduce the risk of
+low-frequency excess noise already at the design stage.
+
+\begin{itemize}
+\item High-power operation at low optical loss. Small asymmetries
+in absorption can increase the effective optical loss for squeezed
+states. Modelling of squeezed light in higher-order modes, improved
+thermal compensation systems, improved arm and mode matching
+techniques.
+\item Parametric instabilities control, modelling of advanced mode
+  dampers, development of a control scheme that
+  allows tracking and selective damping of a large number of modes,
+  requires more detailed modelling to predict individual modes.
+\item Scattered light control, modelling of backscatter of detection
+optics and internal interferometer scatter. Include injection of
+noise with specific coherence into interferometer modelling tools.
+\item Control design: better models of control schemes can be
+  achieved by developing more effective tools
+for the analysis of in-loop cross coupling of a mixed mechanical, 
+optical and electronic system. It is expected that modern control
+schemes as mention in  will be used in a subset of
+systems at this time. 
+\end{itemize}
+
+\subsubsection{Future}
+Over the lifetime of the new facilities being constructed in the
+near future, we envisage a series of detector upgrades
+to fully explore the facility limits.
+Quantum noise reduction presents a challenge that
+will most likely have the strongest impact on the interferometer
+design. Newtonian noise reduction will be required.
+Other priority modelling task for this stage include:
+
+\begin{itemize}
+\item Advanced quantum noise schemes, development of a 
+  robust 'fundamental' quantum limit. Modelling of quantum
+  correlations through complex MIMO (multiple in, multiple out)
+  systems.
+\item Modelling of non-linear optical elements, such as crystals
+  (squeezing), active opto-mechanical elements (unstable filters)
+  etc.  Development and implementation of realistic linearised
+  couplings for these elements into optical models. 
+\item Modelling of long-baseline and high-cavity finesse operation, 
+including geometric consideration, control schemes and thermal
+effects.
+\item Study of optical configurations which rely strongly on polarisation 
+schemes, requires the addition of light polarisation to interferometer models.
+\item Newtonian noise reduction, advanced modelling of local sensing
+  (6D) and global control strategies, a more advanced implementation 
+of mechanical systems and seismic and Newtonian noise coupling in
+interferometer models. Simulation of Newtonian noise based on ground 
+noise measurements.
+\item Investigation of alternative beam shapes for thermal noise
+  reduction, modelling of auxiliary optical systems to study
+  feasibility 
+\end{itemize}
+
 
 \subsection{Pathways and Required Facilities}
 \begin{itemize}
 \item Working groups
 \item workshops
+\item documentation, code maintenance 
 \item Prototypes ?
 \end{itemize}
 
