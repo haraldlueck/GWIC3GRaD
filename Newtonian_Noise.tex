@@ -1,60 +1,92 @@
 \section{Newtonian Noise}
-Newtonian noise (NN) is predicted to be one of the limiting noise sources in third-generation detectors at frequencies below 30\,Hz. It is produced by seismic fields, atmospheric sound and temperature fields, and vibrating infrastructure. In second-generation detectors, these disturbances are mostly produced locally, but the natural environment will become more important in third-generation detectors, since, (a), we have learned and will still learn how to build detector infrastructure that does not disturb the environment in the NN frequency band, and/or (b), our targets for NN cancellation might be so ambitious that we do not only care about the dominant local perturbations, but also about weaker disturbances by nature. Therefore, NN research has a potentially big impact on site selection. 
+Newtonian noise (NN) is predicted to be one of the limiting noise sources in third-generation detectors at frequencies below 30\,Hz \cite{Saulson:NN,Har2015}. It is produced by seismic fields, atmospheric sound and temperature fields, and vibrating infrastructure \cite{HuTh1998,BeEA1998,Cre2008,FiEA2018,Har2015}. Mitigation of NN can be achieved by suppressing density perturbations in the environment of the test masses \cite{HaHi2014}, and by cancellation of NN in GW data using environmental sensors \cite{Cel2000,CoEA2016a}.
 
-Accordingly, R\&D tasks can be associated with at least four important categories:
+In second-generation detectors, NN is mostly produced by detector infrastructure such as pumps and ventilation fans generating seismic and sound waves, but the natural environment will become more important in third-generation detectors, since, (a), we have learned and will still learn how to build detector infrastructure that does not significantly disturb the environment in the NN frequency band, and/or (b), our targets for NN cancellation might be so ambitious that we do not only care about the dominant anthropogenic perturbations, but also about weaker disturbances by nature. Therefore, NN research has a potentially big impact on site selection \cite{BeEA2010}. 
+
+R\&D tasks can be categorized as follows:
 \begin{itemize}
 \item NN modeling
 \item NN mitigation
-\item Impact of NN on site selection
-\item Impact of NN on detector infrastructure
+\item Impact of NN on site selection and detector infrastructure
 \end{itemize}
-These items further divide according to the various sources of NN, e.g., seismic and atmospheric fields. Today, activities are ongoing in all four categories. Modeling of NN is of course the oldest of these disciplines, and still requires efforts especially to take into account details of local geology for precise NN estimation, as well as for the prediction of atmospheric NN including turbulence and scattering of sound waves. 
+These items further divide according to the various sources of NN, e.g., seismic and atmospheric fields. Today, activities are ongoing in all three categories. Modeling of NN still requires efforts especially to take into account details of local geology for precise NN estimation, as well as for the prediction of atmospheric NN including turbulence and scattering of sound waves. 
 
-Third-generation detectors might be constructed underground or at the surface. The modeling and cancellation of NN will be substantially different in these two cases, which means that R\&D tasks can often be clearly divided into surface and underground as will be done in the following.  We will also group R\&D activities according to the source of disturbance to draw a more coherent picture of a specific field. This means that NN modeling and NN mitigation will be restructured into Mitigation of atmospheric NN and Mitigation of seismic NN. 
+Third-generation detectors might be constructed underground or at the surface. The modeling and cancellation of NN will be substantially different in these two cases, which means that R\&D tasks can often be clearly divided into surface and underground. 
 
 \subsection{Current State of the Art}
-
-\paragraph{Mitigation of atmospheric NN}
+\subsubsection*{Modeling of seismic NN}
+\noindent Analytic expressions exist to calculate seismic NN$\ldots$
 \begin{itemize}
-\item Achieved below 2mHz in gravimeters using pressure sensors
-\item NN spectra calculated based on highly-simplified models of sound and temperature fields
-\item Correlation studies between microphones carried out at Virgo
+\item in homogeneous half spaces with cavities for arbitrary wave polarizations \cite{Har2015}.
+\item in laterally homogeneous half spaces for a variety of wave polarizations (shear, compressional, Rayleigh, Stoneley, and a few others) \cite{Har2015}.
+\item from seismic body waves scattered from spherical cavities \cite{Har2015}.
+\item from specific seismic sources such as point forces and point moments in homogeneous half spaces \cite{HaEA2015,Har2016}. 
+\end{itemize}
+Numerical simulations were performed to $\ldots$
+\begin{itemize}
+\item simulate seismic fields from point forces in laterally homogeneous half spaces \cite{BeEA2010c}. 
+\item compare results from different numerical simulations also with analytic solutions (Lamb's problem).
+\item simulate seismic fields in media with arbitrary surface profile.
+\item simulate NN including self-gravity effects (i.e., gravity induced ground motion) \cite{VaEA2017}.
 \end{itemize}
 
-\paragraph{Mitigation of seismic NN}
+\subsubsection*{Modeling of atmospheric NN}
+\noindent Analytic expressions exist to calculate atmospheric NN$\ldots$
 \begin{itemize}
-\item Achieved factor 1000 suppression of seismic signals in seismometers with underground array at Homestake
-\item Achieved factor close to 100 suppression of seismic signals in seismometers with surface array at Hanford
-\item Achieved factor >10 suppression of tilt signal in cBRS tiltmeter with surface array at Hanford
-\item Analytical modeling of NN completed
-\item Analytical modeling and numerical optimization of NN cancellation almost complete (missing the case of NN cancellation in underground arrays)
+\item from homogeneous temperature fields in laminar flows \cite{Cre2008}.
+\item from turbulence induced pressure fluctuations (Lighthill process) \cite{CaAl2009,Har2015}.
+\item from homogeneous sound fields \cite{Cre2008,FiEA2018}.
+\item from atmospheric shock waves \cite{Cre2008,Har2015}.
+\end{itemize}
+Numerical simulations were performed to $\ldots$
+\begin{itemize}
+\item take into account details of the atmosphere such as division into indoor and outdoor atmosphere and exclusion volume from vacuum tanks \cite{FiEA2018}.
+\item to estimate sound and temperature NN underground \cite{FiEA2018}.
 \end{itemize}
 
-\paragraph{Site selection targets}
+\subsubsection*{Mitigation of seismic NN}
+\begin{itemize}
+\item Surface seismometer arrays optimized for NN cancellation were calculated using analytic and numerical methods \cite{Har2015,CoEA2016a}. 
+\item Analytic expressions were derived for Rayleigh waves to express NN and correlations between NN and seismometers in terms of observed seismic correlations \cite{Har2015,CoEA2016a}.
+\item The potential impact of surface topography on NN cancellation was investigated \cite{CoHa2012}.
+\item Tiltmeter signal suppressed by more than an order of magnitude using Wiener-filtered data from seismometer array, which serves as proxy of NN cancellation \cite{HaVe2016,CoEA2018}.
+\item Factor 1000 (100) suppression of seismic signals in seismometers using Wiener-filtered data from underground array at Homestake (surface array at LIGO Hanford) \cite{CoEA2014,CoEA2018}.
+\item Extensive seismic array measurements were performed at Sanford Underground Research Facility, LIGO Hanford, and Virgo.
+\end{itemize}
+
+\subsubsection*{Mitigation of atmospheric NN}
+\begin{itemize}
+\item Achieved below 2\,mHz in gravimeters using pressure sensors \cite{HCW2007}.
+\item Extensive sound correlation measurements were performed at Virgo.
+\end{itemize}
+
+\subsubsection*{Impact of NN on site selection and detector infrastructure}
 \begin{itemize}
 \item Ambient seismic noise levels mostly understood from world-wide studies of impact of geology, distance to major cities, and coast
 \item Some studies of geology made at existing detector sites and at Homestake
 \item Seismic scattering from topography studied in linear order and only to obtain scattering coefficients
-\end{itemize}
-
-\paragraph{Infrastructure}
-\begin{itemize}
 \item Sound and seismic noise between about 5Hz and 50Hz are dominated by sources that are part of LIGO/Virgo infrastructure (e.g., ventilation)
 \item Concrete plans are being developed for infrastructure changes at Virgo to mitigate NN from sound fields 
 \end{itemize}
 
-The following groups are currently pursuing NN activities for second and third-generation detectors (to be rewritten as table; including groups who communicated activities in the past few years):
-INFN-Genova (numerical simulations of seismic fields), 
-Nikhef (numerical simulations and measurements of seismic fields), 
-Polgrav (measurements of seismic fields and development of NN cancellation system), 
-GSSI (atmospheric and seismic NN modeling and cancellation, sensor array optimization, characterization of seismic fields), 
-Caltech (sensor array optimization and development of NN cancellation filters), 
-University of Minneapolis (characterization of underground seismic fields), 
-INFN-Naples (development of tiltmeter for NN cancellation), 
-University of Washington (development of tiltmeter for NN cancellation), 
-INFN-Tor Vergata (numerical simulations of seismic fields), 
-APC (modeling and cancellation of atmospheric NN, characterization of sound fields),
-LIGO Hanford (characterization of seismic fields), EGO (characterization of sound fields, infrastructure modifications), NIMS (seismic NN cancellation)
+The following groups are currently pursuing NN activities for second and third-generation detectors (only including groups who communicated activities in the past few years):
+\begin{itemize}
+\item APC: modeling and cancellation of atmospheric NN, characterization of sound fields
+\item Caltech: sensor array optimization, development of NN cancellation filters
+\item EGO: characterization of seismic and sound fields, infrastructure modifications
+\item GSSI: atmospheric and seismic NN modeling and cancellation, sensor array optimization, characterization of seismic fields
+\item INFN-Genova: numerical simulations of seismic fields
+\item INFN-Naples: development of tiltmeter for NN cancellation 
+\item INFN-Pisa: NN modeling and analytic investigations of NN cancellation
+\item INFN-Roma 3 (numerical simulations of seismic fields
+\item Nikhef: numerical simulations and measurements of seismic fields
+\item Korean Gravitational-Wave Group: seismic NN cancellation
+\item LIGO Hanford: characterization of seismic fields, noise cancellation
+\item Polgrav: measurements of seismic fields and development of NN cancellation system
+\item University of Minnesota: characterization and modeling of underground seismic fields
+\item University of Washington: development of tiltmeter for NN cancellation
+\end{itemize}
+
 
 \subsection{Requirements}
 \subsubsection{3G initial - surface}
