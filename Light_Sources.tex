@@ -1,61 +1,173 @@
 \section{Light Sources}
-{\color{blue} edited on 15 May by Benno\\
-edited ... by ...}\\
+{\color{blue} edited on 17 May by Benno\\
+	edited on 7 Aug by Benno}\\
 This section is devoted to light sources for 3G IFOs. It includes the pre-stabilized high power lasers (PSL) and the squeezed light sources. It does NOT include filter cavities for frequency dependent squeezing quadrature rotation. 
 \subsection{Current State of the Art}
-\begin{itemize}
-\item all advanced GWDs have problems with their lasers
-\item several solutions are being tested: 200\,W class fiber amplifiers (AEI/LZH, MIT, Artemis) and coherently combined solid state amplifiers (AEI)
-\item high power lasers demonstrated in lab
-	\begin{itemize}
-    \item 1064\,nm
-    \item 1550\,nm
-    \item $\rm 2\,\mu m$
-	\end{itemize}
-\item problem with durability
-\item squeezed light sources 
-\begin{itemize}
-    \item 1064\,nm
-    \item 1550\,nm
-    \item $\rm 2\,\mu m$
-	\end{itemize}
-\end{itemize}
+
+{\bf High power laser}\\
+All currently operating advanced GWDs were designed to operate with a 200\,W class pre-stabilized laser system (PSL). All PSLs were independently developed following different approaches for the required high power lasers (HPL). A $ 200\,{\rm W} $ injection locked high power oscillator was installed at LIGO, a fiber based master oscillator power amplifier (MOPA) design was chosen for Virgo and Kagra build on a MOPA desing with fiber and solid-state amplifiers. Due to an unexpectedly high jitter noise coupling of the interferometer Advanced LIGO is currently being operated with 70\,W MOPA systems using commercial solid-state amplifier (neoVAN 4S). A similar system with 100\,W power (neoVAN 4S-HP) was installed in Advanced Virgo as the tested 200\,W fiber MOPA solutions did not work reliably. Kagra is currently operated with a 2\,W solid-state laser. Commercial seed laser (Mephisto series, Coherent) are being used in all PSL derivations. The high power stages are either build by industry or research labs.  \\
+Different investigations are underway towards a stable 200\,W light source with sufficiently low power noise, frequency noise and beam jitter. 
+Ongoing R\&D in Nice, at MIT and in Hannover is devoted to reliability tests of 200\,W fiber amplifiers. A coherent combination of two 200\,W class solid-state amplifiers is under investigation in Hannover and a combination of two 40\,W class fiber amplifiers followed by a high power solid-state amplifier is tested in Japan.
+All afore mentioned high power laser operate at a wavelength of 1064\,nm and are of relevance for the 3G laser development at this wavelength.
+
+At $ 1.5\, {\rm \mu m}$ and in the $ 2\, {\rm \mu m}$ region generic high power laser R\&D devoted to 3G GWDs is performed at Adelaide, IIT Madras, in Hamburg and in Hannover to develop concepts for high power lasers at these wavelength. HPL with approximately 100\,W output power have or will soon be demonstrated by the groups inside the GWD community. 
+
+Different HPL developments can be found in literature which were not specifically designed for GWD applications. These HPL often miss one or more of the stringent requirements for 3G GWD high power light sources.
+
+To the best of our knowledge there is no commercial available HPL with the specifications required for 3G GWDs.\\
+
+{\bf Squeezed light sources}\\
+Non-classical light sources at 1064\,nm generating up to 15\,dB of squeezed vacuum have been developed for the currently operating advanced GWDs. These source have reached maturity such that the GEO600 detector has been reliably operated with squeezed light injection since several years and squeezers are currently being installed at Advanced LIGO and Advanced Virgo.
+Squeezed light sources at $ 1.5\, {\rm \mu m}$ have reached similar squeezing levels but no system design efforts were undertaken yet to convert the laboratory systems into GWD prototypes.
+At $ 2\, {\rm \mu m}$ a few dB of squeezing were demonstrated recently in a laboratory experiment {\color{red} at ANU}.
+
+
+
+%{\bf High power lasers demonstrated in lab}\\
+%{\color{red}to be filled}
+%\begin{itemize}
+%	\item 1064\,nm
+%	\item 1550\,nm
+%	\item $\rm 2\,\mu m m$ (taken from M. Steinke GWADW2018 talk)\\
+%	\begin{tabular}{|c|c|c|c|c|}
+%		\hline 
+%		\textbf{power} & \textbf{linewidth} & \textbf{M2} & \textbf{remark} & \textbf{reference} \\ 
+%		\hline 
+%		600\,W & $< 10\,MHz$ & 1.05 & non-monolithic & [1] \\ 
+%		\hline 
+%		200\,W &$ <2\,MHz$ & 1.6 & monolithic, PER 17dB & [2] \\ 
+%		\hline 
+%		300\,W & $<100\,kHz$ &  & few modes $\rm 25\mu m m fiber $ & [3] \\ 
+%		\hline 
+%	\end{tabular} \\
+%\end{itemize}
+% $[1]$ Goodno et al., Opt. Lett. 34 (8)\\
+% $[2]$ Liu et al, Opt. Express 22\\
+% $[3]$ Wang et al, IEEE Photon. Technol. Lett. 27 (6)\\
+%
+%{\bf squeezed light sources demonstrated in lab}	
+%\begin{itemize}
+%	\item 1064\,nm
+%	\item 1550\,nm
+%	\item $\rm 2\,\mu m m$
+%\end{itemize}
+%
 
 \subsection{Requirements and current/planned R\&D}
-We analyzed available documentation and presentations on next generation gravitational wave detectors (GWDs) to extract requirements for the high power lasers and squeezers. In parallel the  R\&D currently performed within the worldwide gravitational wave (GW) community was identified by sending a questionnaire to 32 laser and sqeezing experts in all GW projects. The questionnaire asked for current and planned R\&D and for desired collaboration topics and coordination mechanisms. The findings are summarized in this sub section.
-The requirements on the pre-stabilized high power laser and the squeezed light sources for 3rd generation GWDs do not seem to be well defined yet. The design of the Einstein Telescope (ET) as defined in the ET design study is build on a 500\,W laser at 1064\,nm in the spatial $\rm LG_{33}$ mode and a 3\,W laser at a wavelength of 1150\,nm in the fundamental Gaussian mode. Even though these are clear requirement, the ET design is currently re-evaluated. In particular the operation of the ET high power IFO in the spatial $\rm LG_{33}$ seems questionable. The current Cosmic Explore (CE) and LIGO Voyager (LV) designs are build on high power light sources with a power of 200\,W and a wavelength of 1550nm or longer for a small absorption coefficients for the light to be transmitted by Silicon test masses. The wavelength choice depends on several factors as e.g. available high power lasers, absorption of the bulk and the high reflective coatings of the test masses, scattering and the availability of photo detectors with high quantum efficiency. As information on several of these factors is missing, a final wavelength choice can not yet be made. Currently the wavelength of 1550\,nm and around $\rm 2\, \mu m $ are favored due to promising high power laser concepts for these wavelength. Hence R\&D on high power laser and squeezer for three different wavelength (1064\,nm, 1550\,nm and around $\rm 2\, \mu m $) has to be performed until the final operation wavelength are selected. All current 3G GWD designs are currently build on 10dB detected squeezing such that squeezed vacuum sources with squeezing levels of $> 15\,dB$ are required. No information on PSLs stability requirements for 3G GWD detectors could be found. As a 10 times better sensitivity is aimed for we assume that the power, frequency and beam jitter stability has to be a factor of 10 higher. Concerning the spatial and polarization purity we expect similar requirements as for the Advanced GWDs.
-With the afore mentioned questionnaire we found, that the current or planned research of at least two groups covers the identified required research areas (see Fig. 
+To evaluate the R\&D currently performed within the worldwide gravitational wave (GW) community a questionnaire was send to 32 laser and sqeezing experts in all GW projects. The questionnaire asked for current and planned R\&D and for desired collaboration topics and coordination mechanisms. We found, that the current or planned research of at least two groups cover all the identified required research areas (see Fig.\ref{fig:LightSourceRD}) 
+
 \begin{figure}[h]
-% \centering
-\includegraphics[scale=0.5]{Light_source_Fig1.png}
-\caption{Current or planned R\&D on high power laser and squeezed vacuum sources}
-\label{fig:LightSourceRD}
+	% \centering
+	\includegraphics[scale=0.4]{Light_source_Fig1.png}
+	\caption{Current or planned R\&D on high power laser and squeezed vacuum sources}
+	\label{fig:LightSourceRD}
 \end{figure}
 
-% \subsubsection{3G initial}
-% \subsubsection{future}
-\subsection{Pathways and required facilities}
-\subsubsection{laboratory prototypes}
-Show that high power generation concepts works reliable, accept poor noise performance, missing diagnostic and actuators for stabilization
-\subsubsection*{1064\,nm}
-we assume reliability problem of 200\,W class fiber amplifier will be solved for Advanced detectors (current work at AEI/LZH, MIT and Artemis)\\
-develop coherent combination techniques at 2x250W power level
-\subsubsection*{1550\,nm}
-assume AEI/LZH fiber amplifier development is successful
-\subsubsection*{$\rm \bf 2\,\mu m$}
-assume either Adelaide cryo HM or wavelength doubling of 1064\,nm in OPA is successful
-\subsubsection*{stabilization}
-develop stabilization concepts for all three wavelength adequate for free running noise and available actuators of laboratory PT developments
-\subsubsection{engineering prototype}
-after final wavelength selection transfer concepts to laser lab or company capable of designing and fabricating an engineering prototype that meets all requirements concerning power, noise performance, spatial and polarization purity, actuators with sufficient range and bandwidth, diagnostic\\
-transfer engineering prototype to research lab for characterization and pre-stabilization\\
-build several engineering prototypes for long-term/reliability tests
-\subsection{Type of collaboration required:  small/large}
-small, summarize results of questionnaire\\
-once at engineering PT stage: synergy between projects requiring similar lasers (if possible avoid single supplier problem)
+We analyzed available documentation and presentations on 3G GWDs to extract requirements for the high power lasers and squeezers. 
+The requirements on the PSL and the squeezed light sources for 3rd generation GWDs do not seem to be well defined yet. The Einstein Telescope (ET) as defined in the ET design study builds on a 500\,W laser at 1064\,nm in the spatial $\rm LG_{33}$ mode and a 3\,W laser at a wavelength of 1550\,nm in the fundamental Gaussian mode. Even though these are clear requirement, the ET design is currently re-evaluated. In particular the operation of the ET high power IFO in the spatial $\rm LG_{33}$ seems questionable. The current  LIGO Voyager (LV) design is build a HPL with a power of 200\,W and a wavelength of 1550nm or longer for a small absorption coefficients for the light to be transmitted by Silicon test masses. Cosmic Explore (CE) will require a HPL within the same wavelength interval but with much higher power. This power level is currently not well defined but was requested to be at least 1\,kW at the 2018 GWADW meeting Girdwoood. The wavelength choice depends on several factors as e.g. available high power lasers, absorption of the bulk and the high reflective coatings of the test masses, scattering and the availability of photo detectors with high quantum efficiency. As information on several of these factors is missing, a final wavelength choice can not yet be made. Currently the wavelength of 1550\,nm and around $\rm 2\, \mu m $ and $\rm 2.1\, \mu m $ are favored due to promising high power laser concepts for these wavelength. Hence R\&D on HPL for three different wavelength (1064\,nm, 1550\,nm and around $\rm 2\, \mu m $) has to be performed until the final operation wavelength are selected. 
 
-\subsection{Suggested mechanisms}
-annual meetings, keep list of who does what,\\
-team up of GWD projects and funding agencies in engineering PT stage
-\subsection{Impact/relation to 2G and upgrades}
-at 1064nm laser development for 2G and upgrades is in direct path to 3G and will serve as long-term test of some concepts
+All 3G GWD designs are currently build on 10dB detected squeezing such that squeezed vacuum sources with squeezing levels of $> 15\,dB$ are required. 
+
+No information on PSLs stability requirements for 3G GWD detectors could be found. As a 10 times better sensitivity is aimed for we assume that the power, frequency and beam jitter stability has to be a factor of 10 higher. Concerning the spatial and polarization purity we expect similar requirements as for the Advanced GWDs.
+
+For the rest of this report we assume the following requirements:
+
+\subsubsection{3G initial}
+\begin{itemize}
+	\item HPL with a power of 250\,W at 1064\,nm with a factor of 10 less noise compared to the 2G PSL and similar spatial and polarization purity requirements as 2G PSLs
+	\item HPL with a power of 500\,W at  $ 1.5\, {\rm \mu m}$ or in the $ 2\, {\rm \mu m}$ region with a factor of 10 less noise compared to the 2G PSL and similar spatial and polarization purity requirements
+	\item Squeezed light sources at all three wavelength with 15\,dB squeezing level
+\end{itemize}
+\subsubsection{future}
+\begin{itemize}
+	\item HPL with a power of 500\,W at 1064\,nm with stability and purity as above
+	\item HPL with a power of 1\,kW at  $ 1.5\, {\rm \mu m}$ or in the $ 2\, {\rm \mu m}$ with stability and purity as above
+	\item Squeezed light sources at all three wavelength with 20\,dB squeezing level
+\end{itemize}
+
+
+\subsection{Pathways and required facilities} \label{sec:pathway}
+The pathway towards adequate PSLs for 3G GWDs has several steps:
+\begin{enumerate}
+	\item Demonstration of reliable high power generation with required power level, low enough free-running noise (defined by stabilization constraints) and acceptable spatial and polarization purity (functional prototype)
+	\item Design, fabrication and test of a HPL according to reproducible fabrication steps with the required diagnostic and stabilization actuators. Demonstration of long-term stable operation and conceptual demonstration of the stabilization concept (engineering prototype).
+	\item Final design steps as part of the respective 3G project and reliability test of the stabilization concept.
+\end{enumerate}
+
+Item 1 is part of generic laser research and is typically performed by university or in laser research laboratories. We expect, that up to a power level of $ \approx 200 \, {\rm W} $ this research will be done in the laboratories listed in Fig.\ref{fig:LightSourceRD}. Together with a coherent combination step this work should be sufficient for the 1064\, nm 3G HPL development.
+For the 1\,kW class laser with a wavelength longer than $ 1.5\, {\rm \mu m}$ this statement does not hold true, such that a new coordinated R\&D effort is required.
+{\color{red} Benno: Do we have any idea on how to generate 1kW in one step? Or do we need to combine 4 x 250\,W lasers?}
+
+The reliability and reproducibility part ofItem 2 does typically need a dedicated program of a large laser research lab or industrial involvement. The scope of this step is normally not included in the funding programs of research funding agencies such that a dedicated R\&D funding program is required to cover the cost of this step.
+Furthermore specific infrastructure andtrained staff is required for the fabrication part of the engineering prototype phase. The assembly and stabilization part can be done in one of the laboratories of the GWD community (see Fig.\ref{fig:LightSourceRD}. The same holds true for one or several coherent combination steps. Depending on the progress of the wavelength decision, the engineering prototype step needs to be conducted for two or three wavelength. At this step several identical HPL should be build and characterized in a long term test.
+
+Item 3 is part of each specific 3G project and should be performed at an early stage of the respective project with project funding.
+
+The pathway towards an adequate squeezed light source will most likely involve university and research lab based R\&D. The required funding is on a scale that can be covered by regular research grants and the development and improvement of non-classical light sources falls in standard calls of funding agencies. Squeezing levels of $ \approx 15 \, {\rm dB} $ have already been achieved for  $ 1\, {\rm \mu m}$ and  $ 1.5\, {\rm \mu m}$ such that the may technical challenges for these wavelengths are the reduction of loss in optical components and  improving the stability and controllability of the squeezing phase. The squeezing research at $ 2\, {\rm \mu m}$ is far less advanced and substantial effort has to be put into the generation of high squeezing levels and low loss components. Several parallel efforts should continue for each wavelength as this approach allows to compare different technical solutions and chose the most appropriate for each project when project funding arrives.
+
+
+%\subsubsection{laboratory prototypes}
+%Show that high power generation concepts works reliable, accept poor noise performance, missing diagnostic and actuators for stabilization
+%\subsubsection*{1064\,nm}
+%we assume reliability problem of 200\,W class fiber amplifier will be solved for Advanced detectors (current work at AEI/LZH, MIT and Artemis)\\
+%develop coherent combination techniques at 2x250W power level
+%\subsubsection*{1550\,nm}
+%assume AEI/LZH fiber amplifier development is successful
+%\subsubsection*{$\rm \bf 2\,\mu m m$}
+%assume either Adelaide cryo HM or wavelength doubling of 1064\,nm in OPA is successful
+%\subsubsection*{stabilization}
+%develop stabilization concepts for all three wavelength adequate for free running noise and available actuators of laboratory PT developments
+%\subsubsection{engineering prototype}
+%after final wavelength selection transfer concepts to laser lab or company capable of designing and fabricating an engineering prototype that meets all requirements concerning power, noise performance, spatial and polarization purity, actuators with sufficient range and bandwidth, diagnostic\\
+%transfer engineering prototype to research lab for characterization and pre-stabilization\\
+%build several engineering prototypes for long-term/reliability tests
+
+\subsection{Type of collaboration required:  small/large}
+Like in the past a strong collaboration between a group within the GWD community and a laser research lab or industry is required (like e.g.  AEI/LZH, Artemis/Alphanov, ICRR/Mitsubihi) to design and build suitable HPLs at the different wavelengths. As the different wavelengths need different solutions a loose collaboration between the respective wavelength groups would be advantageous. It would be desirable to have at least two collaborations to work on laboratory prototype solutions for each wavelength to explore different concepts and alternative technical solutions. These groups should have a strong connection with regular meetings to exchange results and technical solutions. This approach would possibly avoid a single supplier problem.
+No particular collaborations are required for the squeezing research. The normal exchange of concepts and results at collaboration meetings and conferences seems sufficient. 
+
+\subsection{Roadmap}
+\subsubsection{HPL 1064nm}
+\begin{tabular}{|p{1.8 cm}|p{10cm}|}
+	\hline 
+	\textbf{time} & \textbf{work}  \\ 
+	\hline 
+	2019-2020 &continue development and reliability studies of 2G PSL systems at the 250\, W level and perform coherent combinations demonstration experiments at high powers \\ 
+	\hline 
+	2021-2024 & engineering prototype (see section \ref{sec:pathway} ) 500W HPL and conceptual test of stabilization and spatial filter solutions \\ 
+	\hline 
+	2024 - & finals design and fabrication of HPL with the inital 3G requirments within specific 3G GWD project, in parallel R\&D on path toward the future §G requiremnts \\ 
+	\hline 
+\end{tabular} \\
+
+\subsubsection{{HPL ${\bf 1.5 - 2.1 \, {\bf \mu m}}$}}
+\begin{tabular}{|p{1.8 cm}|p{10cm}|}
+	\hline 
+	\textbf{time} & \textbf{work}  \\ 
+	\hline 
+	2019-2021 &identify concepts for a 1\,kW HPL that fulfills the stringent 3G GWD HPL requirements (most likely several coherently combined stages)\\ 
+	\hline 
+	2022-2024 & 1\,kW HPL functional prototype phase (see section \ref{sec:pathway} ) \\ 
+	\hline 
+	2024 - 2028 & 1\,kW HPL engineering prototype phase (see section \ref{sec:pathway} ) \\ 
+	\hline 
+	2028 - & finals design and fabrication of HPL with the inital 3G requirments within specific 3G GWD project, in parallel R\&D on path toward the future §G requiremnts \\
+	\hline
+\end{tabular} \\
+
+\subsubsection{squeezed light sources for 3G GWDs}
+\begin{tabular}{|p{1.8 cm}|p{10cm}|}
+	\hline 
+	\textbf{time} & \textbf{work}  \\ 
+	\hline 
+	2019-2026 &continue laboratory based R\&D on squeezed light sources at all wavelength, potentially involve industrial partners to design and fabricate low loss optical components\\ 
+	\hline 
+	2026 - & finals design and fabrication within specific 3G GWD project \\
+	\hline
+\end{tabular} \\
+
+%\subsection{Suggested mechanisms}
+%annual meetings, keep list of who does what,\\
+%team up of GWD projects and funding agencies in engineering PT stage
+%\subsection{Impact/relation to 2G and upgrades}
+%at 1064nm laser development for 2G and upgrades is in direct path to 3G and will serve as long-term test of some concepts
